@@ -30,4 +30,4 @@ docker rm -f cache-container && docker create -ti --name cache-container dance:e
 docker cp -L cache-container:/var/dance-cache - | tar -H posix -x -C "$(read_action_input scratch-dir)"
 : "Move Cache into Its Place"
 sudo rm -rf "$(read_action_input cache-source)"
-mv "$(read_action_input scratch-dir)"/dance-cache "$(read_action_input cache-source)"
+sudo mv "$(read_action_input scratch-dir)"/dance-cache "$(read_action_input cache-source)"
